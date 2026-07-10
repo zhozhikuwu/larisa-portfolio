@@ -12,7 +12,7 @@ body {
 }
 
 .sidebar {
-  width: 800px;
+  width: 700px;
   min-height: 100vh;
   background: white;
   padding: 65px 60px;
@@ -24,10 +24,10 @@ body {
 .sidebar::before {
   content: "";
   position: absolute;
-  left: -90px;
+  left: -50px;
   bottom: -40px;
-  width: 620px;
-  height: 620px;
+  width: 650px;
+  height: 520px;
   background: url("images/background3.png") no-repeat center;
   background-size: contain;
   z-index: 0;
