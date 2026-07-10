@@ -12,7 +12,7 @@ body {
 }
 
 .sidebar {
-  width: 700px;
+  width: 800px;
   min-height: 100vh;
   background: white;
   padding: 65px 60px;
@@ -175,8 +175,8 @@ nav a {
   left: -70px;         
   bottom: -110px;  
 
-  width: 520px;    
-  height: 520px;
+  width: 720px;    
+  height: 720px;
 
   opacity: 0.0;   
 }
