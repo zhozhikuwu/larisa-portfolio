@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+}
+
+.sidebar {
+  width: 600px;
+  min-height: 100vh;
+  background: white;
+  padding: 65px 60px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  left: -350px;
+  bottom: -190px;
+  width: 920px;
+  height: 920px;
+  background: url("images/background3.png") no-repeat center;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sidebar-content {
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar h1 {
+  font-size: 64px;
+  line-height: 0.95;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+nav a {
+  color: #696969;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.socials {
+  position: fixed;
+  left: 60px;
+  bottom: 60px;
+  display: flex;
+  gap: 18px;
+  z-index: 10;
+}
+
+.socials img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.99;
+  transition: 0.25s;
+}
+
+.socials img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.gallery {
+  width: calc(100vw - 600px);
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 190px;
+  overflow: hidden;
+}
+
+.gallery::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/background1.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.artwork {
+  position: relative;
+  z-index: 1;
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artwork img {
+  max-height: 100%;
+  max-width: calc(100vw - 600px - 260px);
+  object-fit: contain;
+  display: block;
+}
+
+.signature {
+  position: absolute;
+  right: -5px;
+  bottom: 10px;
+  height: 260px;
+  width: auto;
+  opacity: 0.25;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.arrow,
+.caption {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 460px;
+    padding: 90px 40px;
+  }
+
+  .sidebar h1 {
+    font-size: 48px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .socials {
+    position: fixed;
+    left: 40px;
+    bottom: 50px;
+    gap: 22px;
+  }
+
+  .socials img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .gallery {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .artwork img {
+    max-width: 55vw;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    display: block;
+  }
+
+  /* BACKGROUND 3 */
+
+  .sidebar::before {
+    left: -70px;
+    bottom: -250px;
+    width: 520px;
+    height: 520px;
+    opacity: 0.45;
+    z-index: 2;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 64px 26px 22px;
+  }
+
+  .sidebar h1 {
+    font-size: 48px;
+    line-height: 0.95;
+  }
+
+  nav {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  nav a {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .gallery {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 26px 32px;
+    overflow: visible;
+  }
+
+  /* BACKGROUND 1 */
+  .gallery::before {
+    background-size: 250%;
+    background-position: left top;
+    opacity: 0.99;
+  }
+
+  .artwork {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .artwork img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .socials {
+    position: static;
+    display: flex;
+    gap: 22px;
+    margin-top: 24px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .socials img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .signature {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 28px 22px 20px;
+  }
+
+  .sidebar h1 {
+    font-size: 42px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .gallery {
+    padding: 22px 22px 28px;
+  }
+
+  .socials {
+    margin-top: 20px;
+  }
+}

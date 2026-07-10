@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artist Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <h1>LARISA<br>BELEVA</h1>
+
+      <nav>
+        <a href="#">Works</a>
+        <a href="#">About</a>
+        <a href="#">Exhibitions</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="gallery">
+    <button class="arrow left" onclick="prevImage()">‹</button>
+
+    <div class="artwork">
+      <img id="painting" src="images/painting1.jpg" alt="Painting">
+    </div>
+
+    <div class="socials">
+      <a href="mailto:YOUR_EMAIL">
+        <img src="images/ic3.png" alt="Email">
+      </a>
+
+      <a href="https://www.instagram.com/lara82171/?hl=ru" target="_blank" rel="noopener noreferrer">
+        <img src="images/ic1.png" alt="Instagram">
+      </a>
+
+      <a href="https://www.facebook.com/kachagina" target="_blank" rel="noopener noreferrer">
+        <img src="images/ic2.png" alt="Facebook">
+      </a>
+    </div>
+
+    <img src="images/signature.png" class="signature" alt="">
+
+    <button class="arrow right" onclick="nextImage()">›</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
