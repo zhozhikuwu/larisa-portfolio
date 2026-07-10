@@ -12,7 +12,7 @@ body {
 }
 
 .sidebar {
-  width: 800px;
+  width: 700px;
   min-height: 100vh;
   background: white;
   padding: 65px 60px;
@@ -24,10 +24,10 @@ body {
 .sidebar::before {
   content: "";
   position: absolute;
-  left: -90px;
-  bottom: -40px;
-  width: 920px;
-  height: 920px;
+  left: -55px;
+  bottom: -70px;
+  width: 760px;
+  height: 760px;
   background: url("images/background3.png") no-repeat center;
   background-size: contain;
   z-index: 0;
@@ -81,7 +81,7 @@ nav a {
 }
 
 .gallery {
-  width: calc(100vw - 800px);
+  width: calc(100vw - 600px);
   min-height: 100vh;
   position: relative;
   display: flex;
